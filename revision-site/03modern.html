@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Modern Approach</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link id="page-design" rel="stylesheet" type="text/css" href="weblight.css" />
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
+
+	<script type="text/javascript" src="interact.js"></script>
+</head>
+
+<body>
+
+<div id="return_home">
+	<p>
+		< back to <a href="/project/revision-site/">my portfolio</a>
+	</p>
+</div>
+
+<div id="outerbox">
+	<div class="nav">
+		<h2>Navigation</h2>
+			<a href="00index.html">Home</a>
+			<a href="01history.html">In the beginning</a>
+			<a href="02geocities.html">The GeoCities Era</a>
+			<a href="03modern.html">A More Modern Approach</a>
+			<a href="04separation.html">Separation of Concerns</a>
+			<a href="05quiz.html">Test Your Knowledge</a>
+	</div> <!-- nav -->
+	
+	<div class="accesscontainer">
+		<div class="access">
+		<h2>Colour</h2>
+			<a href="#" onclick="swapStyleSheet('weblight.css')">Light mode</a>
+			<a href="#" onclick="swapStyleSheet('webdark.css')">Dark mode</a>
+		</div> <!-- access -->
+		
+		<div class="access">
+		<h2>Text</h2>
+			<a href="#" onclick="increaseFontSize()">Increase font size</a>
+			<a href="#" onclick="decreaseFontSize()">Decrease font size</a>
+		</div> <!-- access -->
+	</div> <!-- accesscontainer -->
+
+	<div id="mainbody">
+		<h1>A More Modern Approach</h1>
+
+		<p>Now, it's very common to see websites using languages like JavaScript, a subset of Java, to make their websites interactive.</p>
+		<p>JavaScript can be used virtually anywhere - dragging and dropping elements on the screen, changing the size, validating forms... the list goes on.</p>
+		<p>What is most important is how this is structured. Tables, rigid and powerful as they are, are unsuitable for website design, especially so if there are any dynamic elements.</p>
+		<p>Most websites nowadays are structured using 'div' elements. These are highly customisable, both in look and interactivity.</p>
+		<p>Let's have another look at the heinously-designed page from the 'GeoCities Era' section of this website. What happens if tables are replaced with 'div' elements?</p>
+		
+	<div class="panel-switch">
+		<a href="#box1" onclick="p_switch('box1');">Live demo</a> 
+		<a href="#box2" onclick="p_switch('box2');">View code</a>
+	</div>
+
+	<div id="box1">
+		<div id="geocities-preview">
+		
+			<div id="geo_contenttable">
+			
+				<div class="marquee"><h1>Here is a title.</h1></div>
+				
+				<div class="geo_content"><img src="window.gif" alt="window" /></div>
+				
+				<div class="geo_content">
+					<p>This paragraph of text has a window either side of it.</p>
+				</div> <!-- geo_content -->
+				
+				<div class="geo_content"><img src="window.gif" alt="window" /></div>
+				
+			</div> <!-- geo_contenttable -->
+			
+			<div class="geo_divider"><img src="animateline.gif" alt="divider" /></div>
+			
+			<div id="geo_content2">
+			
+				<div class="geo_content2section"><img src="rex.gif" alt="T-Rex" /></div>
+				
+				<div class="geo_content2section">
+					<p>Fill this part with text. It stretches over 2 columns. Table cells allow for rigid positioning of objects. There is a T-Rex to the left of this paragraph.</p>
+				</div> <!-- geo_content2section -->
+				
+			</div> <!-- geo_content2 -->
+			
+		</div> <!-- geocities-preview -->
+	</div> <!-- box1 -->
+
+	<div id="box2"> 
+		<pre>
+			<code>
+&lt;!DOCTYPE ... &gt;
+&lt;html xmlns ... &gt;
+
+&lt;head&gt;
+
+	&lt;title&gt;Title goes here.&lt;/title&gt;
+	
+	&lt;style type="text/css"&gt;
+	
+		#geo_contentttable {
+			position: relative;
+			display: table;
+			border-spacing: 0px;
+			width: 100%;
+		}
+
+		.geo_content {
+			display: inline-block;
+			max-width: 350px;
+			text-align: center;
+			font-family: 'Century Gothic';
+			color: #f00;
+		}
+
+		.geo_divider{
+			width: 100%;
+			text-align: center;
+		}
+
+		#geo_content2{
+			position: relative;
+			display: table;
+			border-spacing: 1px;
+			width: 100%;
+			background-color: #ff3;
+			color: #00f;
+		}
+
+		.geo_content2section{
+			display: inline-block;
+			max-width: 430px;
+
+			font-family: 'Verdana';
+			text-align: right;
+			vertical-align: top;
+		}
+		
+	&lt;/style&gt;
+	
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	&lt;div id="geocities-preview"&gt;
+	
+		&lt;div id="geo_contenttable"&gt;
+		
+			&lt;div class="marquee"&gt;&lt;h1&gt;Here is a title.&lt;/h1&gt;&lt;/div&gt;
+			
+			&lt;div class="geo_content"&gt;
+				&lt;img src="window.gif" alt="window" /&gt;
+			&lt;/div&gt;
+			
+			&lt;div class="geo_content"&gt;
+				&lt;p&gt;This paragraph of text has a window either side of it.&lt;/p&gt;
+			&lt;/div&gt;
+			
+			&lt;div class="geo_content"&gt;
+				&lt;img src="window.gif" alt="window" /&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt;
+		
+		&lt;div class="geo_divider"&gt;
+			&lt;img src="animateline.gif" alt="divider" /&gt;
+		&lt;/div&gt;
+		
+		&lt;div id="geo_content2"&gt;
+		
+			&lt;div class="geo_content2section"&gt;
+				&lt;img src="rex.gif" alt="T-Rex" /&gt;
+			&lt;/div&gt;
+			
+			&lt;div class="geo_content2section"&gt;
+				&lt;p&gt;Fill this part with text. It stretches over 2 columns. Table cells allow for rigid positioning of objects. There is a T-Rex to the left of this paragraph.&lt;/p&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt;
+		
+	&lt;/div&gt;	
+	
+&lt;/body&gt;
+
+&lt;/html&gt;
+			</code>
+		</pre>
+	</div> <!-- box2 -->
+	
+		<p>The live demo looks the same, but the table and the cells within it have been replaced by 'div' elements. Each of the 'div' elements need a style associated with them. One other thing that changed was the 'marquee' HTML element - it has been removed, and replaced with a 'div' element under the class 'marquee'.</p>
+		<p>Marquee as an HTML element is <em>deprecated</em> (no longer used), which is probably for the best, but it is possible to achieve this effect using CSS. An example of this is shown below. CSS3 has the ability to handle a wide variety of different animations, and that is without even considering JavaScript.</p>
+		
+		<pre>
+		<code>
+.marquee {
+	height: 50px;	
+	overflow: hidden;
+	position: relative;
+	background: #0f0;
+}
+.marquee [tag to target] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	line-height: 50px;
+	text-align: left;
+	
+	-moz-animation: marquee [time in s] linear infinite alternate;
+	-webkit-animation: marquee [time in s] linear infinite alternate;
+	animation: marquee [time in s] linear infinite alternate;
+}
+
+@-moz-keyframes marquee {
+	0%   { -moz-transform: translateX(65%); }
+	100% { -moz-transform: translateX(0%); }
+}
+@-webkit-keyframes marquee {
+	0%   { -webkit-transform: translateX(65%); }
+	100% { -webkit-transform: translateX(0%); }
+}	
+		</code>
+		</pre>
+		
+		<p>We're still using the concept of separating the style (the CSS) from the information (the HTML), but as you can see, if there were more elements on the page the 'view code' section will end up being monolithic and difficult to follow.</p>
+		<p>It turns out that our concerns can be separated one step further - by keeping the HTML, CSS, and JavaScript (JS) in separate files. We will cover this in the 'Separation of Concerns' section.</p>
+
+	</div> <!-- mainbody -->
+</div> <!-- outerbox -->
+
+</body>
+</html>

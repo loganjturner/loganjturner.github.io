@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>History of WebDev</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link id="page-design" rel="stylesheet" type="text/css" href="weblight.css" />
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
+
+	<script type="text/javascript" src="interact.js"></script>
+</head>
+
+<body>
+	
+<div id="return_home">
+	<p>
+		< back to <a href="/project/revision-site/">my portfolio</a>
+	</p>
+</div>
+
+<div id="outerbox">
+	<div class="nav">
+		<h2>Navigation</h2>
+			<a href="00index.html">Home</a>
+			<a href="01history.html">In the beginning</a>
+			<a href="02geocities.html">The GeoCities Era</a>
+			<a href="03modern.html">A More Modern Approach</a>
+			<a href="04separation.html">Separation of Concerns</a>
+			<a href="05quiz.html">Test Your Knowledge</a>
+	</div> <!-- nav -->
+	
+	<div class="accesscontainer">
+		<div class="access">
+		<h2>Colour</h2>
+			<a href="#" onclick="swapStyleSheet('weblight.css')">Light mode</a>
+			<a href="#" onclick="swapStyleSheet('webdark.css')">Dark mode</a>
+		</div> <!-- access -->
+		
+		<div class="access">
+		<h2>Text</h2>
+			<a href="#" onclick="increaseFontSize()">Increase font size</a>
+			<a href="#" onclick="decreaseFontSize()">Decrease font size</a>
+		</div> <!-- access -->
+	</div> <!-- accesscontainer -->
+
+	<div id="mainbody">
+		<h1>The History of HTML</h1>
+
+		<p>The designing of websites has evolved dramatically since the <a href="https://www.w3.org/People/Raggett/book4/ch02.html">inception of HTML</a> in 1989. When the World Wide Web first launched, websites were purely content-based with no design elements whatsoever. Websites would often look very similar to each other, with a blank white background, and a black serif font.</p>
+		<p>One of the most common fonts that can be found on the web is Times New Roman, as Microsoft had packaged this font with its operating systems <a href="https://www.microsoft.com/typography/fonts/family.aspx?FID=9">starting from Windows 3.1</a>.</p>
+		<p>An example of a very simple website is shown below. Note that some code has been removed for brevity.</p>
+
+	<div class="panel-switch">
+		<a href="#box1" onclick="p_switch('box1');">Live demo</a> 
+		<a href="#box2" onclick="p_switch('box2');">View code</a>
+	</div>
+
+	<div id="box1">
+		<div id="history-preview">
+			<h1>Here is a title.</h1>
+			<p>Here is a piece of text in a paragraph.</p>
+			<p>There are no design elements here.</p>
+		</div>
+	</div> <!-- box1 -->
+
+	<div id="box2">
+		<pre>
+			<code>
+&lt;!DOCTYPE ... &gt;
+&lt;html xmlns ... &gt;
+
+	&lt;head&gt;
+		&lt;title&gt;Title goes here&lt;/title&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;h1&gt;Here is a title.&lt;/h1&gt;
+		
+		&lt;p&gt;Here is a piece of text in a paragraph.&lt;/p&gt;
+		&lt;p&gt;There are no design elements here.&lt;/p&gt;
+	&lt;/body&gt;
+
+&lt;/html&gt;
+			</code>
+		</pre>
+	</div> <!-- box2 -->
+
+</div> <!-- mainbody -->
+</div> <!-- outerbox -->
+
+</body>
+</html>

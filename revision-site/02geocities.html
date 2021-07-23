@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>GeoCities Era</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link id="page-design" rel="stylesheet" type="text/css" href="weblight.css" />
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
+
+	<script type="text/javascript" src="interact.js"></script>
+</head>
+
+<body>
+
+<div id="return_home">
+	<p>
+		< back to <a href="/project/revision-site/">my portfolio</a>
+	</p>
+</div>
+
+<div id="outerbox">
+	<div class="nav">
+		<h2>Navigation</h2>
+			<a href="00index.html">Home</a>
+			<a href="01history.html">In the beginning</a>
+			<a href="02geocities.html">The GeoCities Era</a>
+			<a href="03modern.html">A More Modern Approach</a>
+			<a href="04separation.html">Separation of Concerns</a>
+			<a href="05quiz.html">Test Your Knowledge</a>
+	</div> <!-- nav -->
+	
+	<div class="accesscontainer">
+		<div class="access">
+		<h2>Colour</h2>
+			<a href="#" onclick="swapStyleSheet('weblight.css')">Light mode</a>
+			<a href="#" onclick="swapStyleSheet('webdark.css')">Dark mode</a>
+		</div> <!-- access -->
+		
+		<div class="access">
+		<h2>Text</h2>
+			<a href="#" onclick="increaseFontSize()">Increase font size</a>
+			<a href="#" onclick="decreaseFontSize()">Decrease font size</a>
+		</div> <!-- access -->
+	</div> <!-- accesscontainer -->
+
+	<div id="mainbody">
+		<h1>The GeoCities Era</h1>
+			<p>The first specification for CSS 1 <a href="https://www.w3.org/TR/REC-CSS1/">was written in 1996</a>. Websites like GeoCities, Angelfire, and Tripod were widespread as user-generated content began to rise in popularity.</p>
+
+			<p>While GeoCities <a href="http://mashable.com/2009/04/23/geocities-shutdown/#SpJHVBYgBEq0">shut down</a> in 2009, and many Angelfire and Tripod websites remain abandoned, it is still possible to trace the evolution of website design over the past two decades.</p>
+			<p>Earlier websites had little design, perhaps changing the font and colours, and using inline tags to make words bold, italic, or perhaps to make them move across the screen (the <code>&lt;marquee&gt;</code> and <code>&lt;blink&gt;</code> tags are <a href="http://goer.org/Journal/2003/10/html_house_of_horror_things_that_go_blink_in_the_n.html">notorious</a> for being irritating products of their time).</p>
+			<p>Later on, you begin to see CSS make its appearance. It <a href="http://www.webstandards.org/learn/external/css/">became the standard</a> for website design in 2001. There is less focus on tables and frames being used for positioning, and a larger focus on div elements and the box layout.</p>	
+		
+			<p>View a code sample below. This shows how elements would have commonly be arranged on the page and how they would have been designed.</p>
+		
+	<div class="panel-switch">
+		<a href="#box1" onclick="p_switch('box1');">Live demo</a> 
+		<a href="#box2" onclick="p_switch('box2');">View code</a>
+	</div>
+
+	<div id="box1">
+		<div id="geocities-preview">
+		
+			<div id="geo_contenttable">
+			
+				<div class="marquee"><h1>Here is a title.</h1></div>
+				
+				<div class="geo_content"><img src="window.gif" alt="window" /></div>
+				
+				<div class="geo_content">
+					<p>This paragraph of text has a window either side of it.</p>
+				</div> <!-- geo_content -->
+				
+				<div class="geo_content"><img src="window.gif" alt="window" /></div>
+				
+			</div> <!-- geo_contenttable -->
+			
+			<div class="geo_divider"><img src="animateline.gif" alt="divider" /></div>
+			
+			<div id="geo_content2">
+			
+				<div class="geo_content2section"><img src="rex.gif" alt="T-Rex" /></div>
+				
+				<div class="geo_content2section">
+					<p>Fill this part with text. It stretches over 2 columns. Table cells allow for rigid positioning of objects. There is a T-Rex to the left of this paragraph.</p>
+				</div> <!-- geo_content2section -->
+				
+			</div> <!-- geo_content2 -->
+			
+		</div> <!-- geocities-preview -->
+	</div> <!-- box1 -->
+	
+	<div id="box2">	
+		<pre>
+			<code>
+&lt;!DOCTYPE ... &gt;
+&lt;html xmlns ... &gt;
+
+&lt;head&gt;
+	&lt;title&gt;Title goes here&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;marquee style="background:#0f3" behavior="alternate"&gt;&lt;h1&gt;Here is a title.&lt;/h1&gt;&lt;/marquee&gt;
+
+&lt;table border="1" width="100%" cellpadding="3"&gt;
+
+&lt;tr&gt;
+	&lt;td&gt; &lt;img src="window.gif" alt="window" /&gt; &lt;/td&gt;
+
+	&lt;td width="300px" style="font-family:'century gothic';color:#f00"&gt;
+		&lt;p&gt;This text has a window either side of it.&lt;/p&gt;
+	&lt;/td&gt;
+
+	&lt;td&gt; &lt;img src="window.gif" alt="window" /&gt; &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+	&lt;td colspan="3"&gt; &lt;img src="animateline.gif" alt="divider" /&gt; &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+	&lt;td&gt; &lt;img src="rex.gif" alt="T-Rex" /&gt; &lt;/td&gt;
+
+	&lt;td colspan="2" style="background:#0f3;font-family:verdana;color:#00f"&gt;
+		&lt;p&gt;Fill this part with text. It stretches over 2 columns. Table cells allow for rigid positioning of objects. There is a T-Rex to the left of this paragraph.&lt;/p&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+	
+&lt;/body&gt;
+
+&lt;/html&gt;
+			</code>
+		</pre>
+	</div> <!-- box2 -->
+		
+		<p>As you can see, all of the information - the structure and the design - is bundled together. Maintenance can be extremely difficult in these circumstances as it can be hard to pinpoint problems.</p>
+		<p>What happens when the design is stripped from the structure and held elsewhere? It may look more like the following.</p>
+
+		<pre>
+	<code>
+&lt;!DOCTYPE ... &gt;
+&lt;html xmlns ... &gt;
+
+&lt;head&gt;
+	&lt;title&gt;Title goes here&lt;/title&gt;
+	
+	&lt;style type="text/css"&gt;
+		body{
+			font-family: helvetica, sans-serif;
+			font-size: 16pt;
+		}
+		h1{
+			background: #0f3;
+		}
+		table{
+			border: 1px;
+			width: 100%;
+		}
+		td{
+			padding: 3px;
+		}
+		.cell-one{
+			width: 300px;
+			font-family: 'Century Gothic';
+			color: #f00;
+		}
+		.cell-two{
+			background-color: #0f3;
+			color: #00f;
+			font-family: 'Verdana';
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;marquee behavior="alternate"&gt;&lt;h1&gt;Here is a title.&lt;/h1&gt;&lt;/marquee&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+       &lt;img src="window.gif" alt="window" /&gt;
+    &lt;/td&gt;
+	
+    &lt;td class="cell-one"&gt;
+        &lt;p&gt;This text has a window either side of it.&lt;/p&gt;
+    &lt;/td&gt;
+	
+    &lt;td&gt;
+       &lt;img src="window.gif" alt="window" /&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td colspan="3"&gt;
+        &lt;img src="animateline.gif" alt="divider" /&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        &lt;img src="rex.gif" alt="T-Rex" /&gt;
+    &lt;/td&gt;
+	
+    &lt;td colspan="2" class="cell-two"&gt;
+        &lt;p&gt;Fill this part with text. It stretches over 2 columns. Table cells allow for rigid positioning of objects. There is a T-Rex to the left of this paragraph.&lt;/p&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+	</code>
+</pre>
+
+		<p>Unfortunately, the structure is still very difficult to make sense of when everything is grouped by tables. Later on, 'div' elements would rise in popularity, and would make ordering and positioning elements a lot easier and less confusing.</p>
+		
+	</div> <!-- mainbody -->
+</div> <!-- outerbox -->
+
+</body>
+</html>

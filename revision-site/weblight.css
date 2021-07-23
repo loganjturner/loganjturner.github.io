@@ -1,0 +1,508 @@
+body {
+	background: #f7f7f7; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #f7f7f7, #e8f1f7); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #f7f7f7, #e8f1f7); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #f7f7f7, #e8f1f7); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #f7f7f7, #e8f1f7); /* Standard syntax */
+	background-attachment: fixed;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	font-family: 'PT Sans', helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+/* design the links */
+a{
+	background-color: #9ff;
+	color: #00c;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+/* design header elements */
+h1, h2, h3, h4 {
+	font-family: 'Orbitron', sans-serif;
+	letter-spacing: 2px;
+	padding: 10px 0px;
+	margin: 0;
+	line-height: 1em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 24pt;
+}
+
+h2 {
+	font-size: 16pt;
+}
+
+h3 {
+	font-size: 12pt;
+}
+
+/* design the scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+	height: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9ff;
+	border-radius: 10px;
+}
+
+/* container for everything on the screen */
+#outerbox {
+	width: 1100px;
+	margin: 50px auto;
+	position: relative;
+	
+	/* make transitions fluid */
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/* link boxes */
+.nav, .access {
+	width: 220px;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 7px 0px;
+	
+	/* add outer glow */
+	-webkit-box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+	-moz-box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+	box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+}
+
+/* navigation panel */
+.nav {
+	float: left;
+	position: absolute;
+	margin-top: 100px;
+	text-align: center;
+	
+	/* make transitions fluid */
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/* holds both of the accessibility boxes */
+.accesscontainer {
+	float: right;
+	right: 0;
+	position: absolute;
+	margin-top: 100px;
+	text-align: center;
+	
+	/* make transitions fluid */
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/* accessibility boxes */
+.access {
+	margin-bottom: 30px;
+}
+
+.nav a, .access a, input.quiz-submit[type="submit"]{
+	background-color: #9ff;
+	color: #00c;
+	display: block;
+	
+    font-family: 'consolas', monospace;
+    font-size: 8pt;
+    text-transform: uppercase;
+	text-decoration: none;
+    letter-spacing: 1px;
+	
+	line-height: 1.4em;
+	padding: 3px 5px;
+	margin: 10px 15px;
+	border-radius: 20px;
+	
+	/* make transitions fluid */
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/* hover over the nav/access links */
+.nav a:hover, .access a:hover {
+    margin: 10px 0;
+    letter-spacing: 2px;
+	border-radius: 0;
+}
+
+/* the main container of content */
+#mainbody {
+	width: 600px;
+	overflow-y: auto;
+	position: relative;
+	
+	margin: 0 auto;
+	padding: 20px 10px;
+	background: #fff;
+	color: #000;
+	font-size: 12pt; /* set font size again so javascript can find it */
+	
+	border-radius: 20px;
+	
+	/* add outer glow */
+	-webkit-box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+	-moz-box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+	box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+	
+	/* make transitions fluid */
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+#mainbody img {
+	max-width: 100%;
+}
+
+/* adjust layout if the screen is smaller */
+@media screen and (max-width: 1100px) {
+	
+	#outerbox {
+		width: 870px;
+		margin: 50px auto;
+		position: relative;
+	}
+	
+	.nav{
+		margin-top: 0px;
+	}
+	
+	.accesscontainer {
+		float: left;
+		left: 0;
+		margin-top: 270px;
+	}
+	
+	#mainbody{
+		float: right;
+	}
+}
+
+/* panel switch design */
+.panel-switch{
+	text-align: center;
+	font-family: 'consolas', monospace;
+	margin: 0;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	font-size: 8pt;
+	
+	padding: 10px;
+	border-radius: 20px 20px 0px 0px;
+	background-color: #f7f7f7;
+}
+
+.panel-switch a{
+	text-decoration: none;
+	padding: 5px 10px;
+	letter-spacing: 1px;
+	background-color: #9ff;
+	color: #00c;
+	
+	/* middle buttons will have no rounding */
+	border-radius: 0; 
+	
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.panel-switch a:first-child{
+	border-radius: 20px 0px 0px 20px;
+}
+
+.panel-switch a:last-child{
+	border-radius: 0px 20px 20px 0px;
+}
+
+.panel-switch a:hover, input.quiz-submit[type="submit"]:hover{
+	background-color: #fff;
+	letter-spacing: 2px;
+	
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/* style code samples */
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	
+	display: block;
+	padding: 5px 10px;
+	margin: 0;
+	
+	tab-size: 4;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	-webkit-tab-size: 4;
+	
+	font-family: 'consolas', monospace;
+	font-size: 10pt;
+	background-color: #f2f2f2;
+	color: #404040;
+	
+	max-height: 400px;
+	overflow-y: scroll;
+	border-width: 3px;
+	border-style: inset;
+}
+
+code {
+	padding: 5px;
+	margin: 0;
+	border: 0;
+}
+
+/* PANELS THAT CAN BE SWITCHED */
+
+/* preview */
+#box1 {
+	display: block;
+}
+/* code */
+#box2 {
+	display: none;
+}
+
+#boxA {
+	display: block;
+}
+
+#boxB {
+	display: none;
+}
+
+#boxC {
+	display: none;
+}
+
+/* history page */
+
+#history-preview{
+	background-color: #fff;
+	color: #000;
+	font-family: 'times', serif;
+	border-width: 3px;
+	border-style: inset;
+	padding: 10px;
+}
+
+/* history header */
+#history-preview h1{
+	font-weight: bold;
+	font-family: 'times', serif;
+	letter-spacing: 0px;
+	padding: 5px 0px;
+	margin: 0;
+	line-height: 1.5em;
+	text-align: left;
+	text-transform: none;
+}
+
+/* geocities page */
+
+#geocities-preview{
+	background-color: #fff;
+	background-image: url('geo_mainlight.gif');
+	color: #000;
+	font-family: 'times', serif;
+	border-width: 3px;
+	border-style: inset;
+}
+
+/* geocities header */
+#geocities-preview h1{
+	font-weight: bold;
+	font-family: 'times', serif;
+	letter-spacing: 0px;
+	padding: 5px 0px;
+	margin: 0;
+	line-height: 1.5em;
+	text-align: left;
+	text-transform: none;
+}
+
+.marquee {
+	height: 50px;	
+	overflow: hidden;
+	position: relative;
+	background: #0f0;
+}
+.marquee h1 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	line-height: 50px;
+	text-align: left;
+	/* Apply animation to this element */	
+	-moz-animation: marquee 4s linear infinite alternate;
+	-webkit-animation: marquee 4s linear infinite alternate;
+	animation: marquee 4s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes marquee {
+	0%   { -moz-transform: translateX(68%); }
+	100% { -moz-transform: translateX(0%); }
+}
+@-webkit-keyframes marquee {
+	0%   { -webkit-transform: translateX(68%); }
+	100% { -webkit-transform: translateX(0%); }
+}
+@keyframes marquee {
+	0%   { 
+	-moz-transform: translateX(68%); /* Firefox fix */
+	-webkit-transform: translateX(68%); /* Firefox fix */
+	transform: translateX(68%); 		
+	}
+	
+	100% { 
+	-moz-transform: translateX(0%); /* Firefox fix */
+	-webkit-transform: translateX(0%); /* Firefox fix */
+	transform: translateX(0%); 
+	}
+}
+
+/* holds the 3 sections of content */
+/* the two windows and the centre paragraph */
+#geo_contenttable {
+	position: relative;
+	display: table;
+	border-spacing: 0px;
+	width: 100%;
+}
+
+/* assigned for each 'cell' */
+.geo_content {
+    display: inline-block;
+    max-width: 380px;
+	text-align: center;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	color: #f00;
+}
+
+/* divider image */
+.geo_divider{
+	width: 100%;
+	text-align: center;
+}
+
+/* another div to hold elements like a table */
+#geo_content2{
+	position: relative;
+	display: table;
+	border-spacing: 1px;
+	width: 100%;
+	background-color: #ff3;
+	color: #00f;
+}
+
+/* assigned for each 'cell' */
+.geo_content2section{
+	display: inline-block;
+	max-width: 430px;
+
+	font-family: 'Verdana', Geneva, sans-serif;
+	text-align: right;
+	vertical-align: top;
+}
+
+/* quiz page design */
+
+.quiz-answers{
+	font-size: 12pt;
+	padding: 4px 0px;
+}
+
+label {
+	vertical-align:top;
+}
+
+.answer[type="radio"] {
+	margin-bottom: 10px;
+}
+
+.answer[type="radio"]:checked + label {
+	background: #9ff;
+}
+
+.quiz-submit[type="submit"] {
+	margin: 0;
+	border: 0;
+	outline: 0;
+	width: 85px;
+	font-size: 10pt;
+}
+
+.submitter {
+	width: 85px;
+	margin: 0 auto;
+	padding: 10px 0px;
+}
+
+/* most of the design for this button is higher in this sheet */
+input.quiz-submit[type="submit"]{
+	margin: 0;
+}
+
+.score{
+	margin: 0 auto;
+	max-width: 300px;
+	text-align: center;
+}
+
+.answer-container{
+	margin-left: 30px;
+}
+
+#return_home
+{
+	position: fixed;
+	padding: 4px 16px;
+	font-size: 14pt;
+	margin-left: 32px;
+	
+	background-color: #fff;
+	border-radius: 20px;
+	
+	/* add outer glow */
+	-webkit-box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+	-moz-box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+	box-shadow: 0px 0px 15px -1px rgba(153, 255, 255, 1);
+}

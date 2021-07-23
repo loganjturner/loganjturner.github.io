@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Separating Concerns</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link id="page-design" rel="stylesheet" type="text/css" href="weblight.css" />
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
+
+	<script type="text/javascript" src="interact.js"></script>
+</head>
+
+<body>
+	
+<div id="return_home">
+	<p>
+		< back to <a href="/project/revision-site/">my portfolio</a>
+	</p>
+</div>
+
+<div id="outerbox">
+	<div class="nav">
+		<h2>Navigation</h2>
+			<a href="00index.html">Home</a>
+			<a href="01history.html">In the beginning</a>
+			<a href="02geocities.html">The GeoCities Era</a>
+			<a href="03modern.html">A More Modern Approach</a>
+			<a href="04separation.html">Separation of Concerns</a>
+			<a href="05quiz.html">Test Your Knowledge</a>
+	</div> <!-- nav -->
+	
+	<div class="accesscontainer">
+		<div class="access">
+		<h2>Colour</h2>
+			<a href="#" onclick="swapStyleSheet('weblight.css')">Light mode</a>
+			<a href="#" onclick="swapStyleSheet('webdark.css')">Dark mode</a>
+		</div> <!-- access -->
+		
+		<div class="access">
+		<h2>Text</h2>
+			<a href="#" onclick="increaseFontSize()">Increase font size</a>
+			<a href="#" onclick="decreaseFontSize()">Decrease font size</a>
+		</div> <!-- access -->
+	</div> <!-- accesscontainer -->
+
+	<div id="mainbody">
+		<h1>Separation of Concerns</h1>
+			
+			<p>How do we help prevent website code from becoming too large? Beforehand, we split the design elements (CSS) away from the information (HTML) by putting the CSS between <code>&lt;style&gt;&lt;/style&gt;</code> tags, in the <code>&lt;head&gt;</code> section of the code. This works, but what if we wanted to apply the same design elements to multiple pages? This is where the CSS can be stored in a separate file, and applied to multiple HTML documents.</p>
+			<p>See below, where the CSS has been separated from the HTML. The styling has been called into the HTML document using <code>&lt;link /&gt;</code>.</p>
+	
+	<div class="panel-switch">
+		<a href="#box1" onclick="p_switch('box1');">base.html</a> 
+		<a href="#box2" onclick="p_switch('box2');">design.css</a>
+	</div>
+
+	<div id="box1">
+		<pre>
+			<code>
+&lt;!DOCTYPE ... &gt;
+&lt;html xmlns ... &gt;
+
+&lt;head&gt;
+
+	&lt;title&gt;Title goes here.&lt;/title&gt;
+	
+	&lt;link rel="stylesheet" type="text/css" href="design.css" /&gt;
+	
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	&lt;div id="geocities-preview"&gt;
+	
+		&lt;div id="geo_contenttable"&gt;
+		
+			&lt;div class="marquee"&gt;&lt;h1&gt;Here is a title.&lt;/h1&gt;&lt;/div&gt;
+			
+			&lt;div class="geo_content"&gt;
+				&lt;img src="window.gif" alt="window" /&gt;
+			&lt;/div&gt;
+			
+			&lt;div class="geo_content"&gt;
+				&lt;p&gt;This paragraph of text has a window either side of it.&lt;/p&gt;
+			&lt;/div&gt;
+			
+			&lt;div class="geo_content"&gt;
+				&lt;img src="window.gif" alt="window" /&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt;
+		
+		&lt;div class="geo_divider"&gt;
+			&lt;img src="animateline.gif" alt="divider" /&gt;
+		&lt;/div&gt;
+		
+		&lt;div id="geo_content2"&gt;
+		
+			&lt;div class="geo_content2section"&gt;
+				&lt;img src="rex.gif" alt="T-Rex" /&gt;
+			&lt;/div&gt;
+			
+			&lt;div class="geo_content2section"&gt;
+				&lt;p&gt;Fill this part with text. It stretches over 2 columns. Table cells allow for rigid positioning of objects. There is a T-Rex to the left of this paragraph.&lt;/p&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt;
+		
+	&lt;/div&gt;	
+	
+&lt;/body&gt;
+
+&lt;/html&gt;
+			</code>
+		</pre>
+	</div> <!-- box1 -->
+
+	<div id="box2"> 
+		<pre>
+			<code>
+#geo_contentttable {
+	position: relative;
+	display: table;
+	border-spacing: 0px;
+	width: 100%;
+}
+
+.geo_content {
+	display: inline-block;
+	max-width: 350px;
+	text-align: center;
+	font-family: 'Century Gothic';
+	color: #f00;
+}
+
+.geo_divider{
+	width: 100%;
+	text-align: center;
+}
+
+#geo_content2{
+	position: relative;
+	display: table;
+	border-spacing: 1px;
+	width: 100%;
+	background-color: #ff3;
+	color: #00f;
+}
+
+.geo_content2section{
+	display: inline-block;
+	max-width: 430px;
+
+	font-family: 'Verdana';
+	text-align: right;
+	vertical-align: top;
+}
+			</code>
+		</pre>
+	</div> <!-- box2 -->
+	
+	<p>How would this work with JavaScript? It works in practically the same way as the CSS. Write the code in a separate <code>.js</code> file, and import it into the main HTML document.</p>
+	<p>An example is shown below, using the code that is used to display these three panels and how to switch between them.</p>
+		
+	<div class="panel-switch">
+		<a href="#boxA" onclick="p_switch('boxA');">base.html</a> 
+		<a href="#boxB" onclick="p_switch('boxB');">design.css</a>
+		<a href="#boxC" onclick="p_switch('boxC');">interact.js</a>
+	</div>
+	
+	<div id="boxA">
+		<pre>
+			<code>
+&lt;!DOCTYPE ... &gt;
+&lt;html xmlns ... &gt;
+
+&lt;head&gt;
+
+	&lt;title&gt;Title goes here.&lt;/title&gt;
+	
+	&lt;link rel="stylesheet" type="text/css" href="design.css" /&gt;
+	&lt;script type="text/javascript" src="interact.js"&gt;&lt;/script&gt;
+	
+&lt;/head&gt;
+
+&lt;body&gt;
+
+[...]
+
+&lt;div class="panel-switch"&gt;
+	&lt;a href="#" onclick="p_switch('boxA');"&gt;base.html&lt;/a&gt; 
+	&lt;a href="#" onclick="p_switch('boxB');"&gt;design.css&lt;/a&gt;
+	&lt;a href="#" onclick="p_switch('boxC');"&gt;interact.js&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div id="boxA"&gt;
+	(HTML code here)
+&lt;/div&gt;
+
+&lt;div id="boxB"&gt;
+	(CSS code here)
+&lt;/div&gt;
+
+&lt;div id="boxC"&gt;
+	(JS code here)
+&lt;/div&gt;
+
+[...]
+			</code>
+		</pre>
+	</div> <!-- boxA -->
+
+	<div id="boxB"> 
+		<pre>
+			<code>
+.panel-switch{
+	/* design the links */
+}
+
+pre {
+	/* design the pre tag */
+}
+
+code {
+	padding: 5px;
+	margin: 0;
+	border: 0;
+}
+
+#boxA {
+	display: block;
+}
+
+#boxB {
+	display: none;
+}
+
+#boxC {
+	display: none;
+}
+			</code>
+		</pre>
+	</div> <!-- boxB -->
+	
+	<div id="boxC"> 
+		<pre>
+			<code>
+function p_switch(id) {
+
+	if(id == 'boxA') {
+    	document.getElementById('boxA').style.display = "block";
+    	document.getElementById('boxB').style.display = "none";    	
+		document.getElementById('boxC').style.display = "none"; 
+    }
+	
+	if(id == 'boxB') {
+    	document.getElementById('boxB').style.display = "block";
+    	document.getElementById('boxA').style.display = "none"; 
+		document.getElementById('boxC').style.display = "none";		
+    }
+	
+	if(id == 'boxC') {
+    	document.getElementById('boxC').style.display = "block";
+    	document.getElementById('boxA').style.display = "none";
+		document.getElementById('boxB').style.display = "none";    	
+    }
+    
+}
+			</code>
+		</pre>
+	</div> <!-- boxC -->
+		
+	</div> <!-- mainbody -->
+</div> <!-- outerbox -->
+
+</body>
+</html>
