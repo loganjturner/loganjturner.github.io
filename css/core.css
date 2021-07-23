@@ -24,11 +24,17 @@ a, a:visited, a:hover
 	width: 256px;
 }
 
+#website_container
+{
+	position: relative;
+	margin-left: 296px;
+	padding: 2px 16px;
+}
+
 #project_list
 {
 	display: grid;
-	width: 60%;
-	margin: auto;
+	width: auto;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -51,8 +57,4 @@ a, a:visited, a:hover
 {
 	font-style: italic;
 	color: #ffb000 /* slightly darker */
-}
-
-.project_summary
-{
 }
