@@ -2,7 +2,7 @@ body
 {
 	background-color: #282828;
 	color: #ffcc00;
-	font-family: 'Tahoma', 'Helvetica', sans-serif;
+	font-family: 'Geneva', 'Tahoma', 'Verdana', sans-serif; 
 	font-size: 11pt;
 }
 
@@ -18,16 +18,9 @@ a, a:visited, a:hover
 	font-weight: normal;
 }
 
-#navigation
-{
-	position: fixed;
-	width: 256px;
-}
-
 #website_container
 {
 	position: relative;
-	margin-left: 296px;
 	padding: 2px 16px;
 }
 
@@ -35,7 +28,11 @@ a, a:visited, a:hover
 {
 	display: grid;
 	width: auto;
-	grid-template-columns: 1fr 1fr 1fr;
+}
+
+#navigation
+{
+	margin-bottom: 16px;
 }
 
 .project
@@ -57,4 +54,56 @@ a, a:visited, a:hover
 {
 	font-style: italic;
 	color: #ffb000 /* slightly darker */
+}
+
+@media screen and (min-width: 1000px)
+{
+	#project_list
+	{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	
+	#website_container
+	{
+		margin-left: 296px;
+	}
+	
+	#navigation
+	{
+		position: fixed;
+		width: 256px;
+	}
+	
+	#footer
+	{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		padding-left: 8px;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px)
+{
+	#project_list
+	{
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	#website_container
+	{
+		margin-left: 0;
+	}
+	
+	#navigation
+	{
+		position: relative;
+		width: 100%;
+		border-bottom: 3px double #333;
+	}
+	
+	#website_container p img
+	{
+		max-width: 100%;
+	}
 }
