@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Logan Turner</title>
-    <link>https://logan-james.github.io/</link>
+    <link>https://loganjturner.github.io/</link>
     <description>Recent content on Logan Turner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://logan-james.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://loganjturner.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Victorian Safe Cracker</title>
-      <link>https://logan-james.github.io/project/safe-cracker/</link>
+      <link>https://loganjturner.github.io/project/safe-cracker/</link>
       <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://logan-james.github.io/project/safe-cracker/</guid>
+      <guid>https://loganjturner.github.io/project/safe-cracker/</guid>
       <description>This project explored building a model using the Vienna Development Method that would crack a Victorian-era Safecracker 40 puzzle. Once proved using software such as Isabelle, the model could then be translated into a running program.</description>
     </item>
     
     <item>
       <title>Planet Destruction (Dissertation)</title>
-      <link>https://logan-james.github.io/project/planet-destruction/</link>
+      <link>https://loganjturner.github.io/project/planet-destruction/</link>
       <pubDate>Fri, 07 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://logan-james.github.io/project/planet-destruction/</guid>
+      <guid>https://loganjturner.github.io/project/planet-destruction/</guid>
       <description>My dissertation explored real-time physics destruction within video games, specifically on a planetary scale. I taught myself how to use Unreal Engine 4 from scratch with its then-experimental Chaos physics system.</description>
     </item>
     
     <item>
       <title>Ultimate Chess</title>
-      <link>https://logan-james.github.io/project/ultimate-chess/</link>
+      <link>https://loganjturner.github.io/project/ultimate-chess/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://logan-james.github.io/project/ultimate-chess/</guid>
+      <guid>https://loganjturner.github.io/project/ultimate-chess/</guid>
       <description>The main focus here was building a 2D collision detection system as part of an automated game that uses chess pieces, with extensive use of unit testing to ensure it actually worked.</description>
     </item>
     
     <item>
       <title>Cube Destruction</title>
-      <link>https://logan-james.github.io/project/cube-destruction/</link>
+      <link>https://loganjturner.github.io/project/cube-destruction/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://logan-james.github.io/project/cube-destruction/</guid>
+      <guid>https://loganjturner.github.io/project/cube-destruction/</guid>
       <description>Easily one of the most fun pieces of coursework I completed over the course of my degree. Given a cube mesh file, the task was to destroy it using multiple different OpenGL shaders.</description>
     </item>
     
     <item>
       <title>Revision Site</title>
-      <link>https://logan-james.github.io/project/revision-site/</link>
+      <link>https://loganjturner.github.io/project/revision-site/</link>
       <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://logan-james.github.io/project/revision-site/</guid>
+      <guid>https://loganjturner.github.io/project/revision-site/</guid>
       <description>A super simple, accessible revision website I put together for a coursework project. It details a brief history of web design and the separation of concerns with code examples too.</description>
     </item>
     
